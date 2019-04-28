@@ -21,8 +21,7 @@ $ git init
 $ readme
 ```
 
-[![asciicast](https://asciinema.org/a/14.png)](https://asciinema.org/a/14)
-
+[![asciicast](https://asciinema.org/a/243213.svg)](https://asciinema.org/a/243213)
 
 ## Contributing
 
