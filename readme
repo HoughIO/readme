@@ -1,0 +1,55 @@
+#!/bin/bash
+
+lorem="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, enim id venenatis finibus, quam nisi vehicula turpis, non maximus velit lectus eu lorem. Suspendisse nec mi eu justo sagittis imperdiet. Aliquam semper consectetur lacinia. Pellentesque ornare ante mi, non vulputate leo dictum eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac sollicitudin tellus. Fusce condimentum ultrices pharetra. Ut convallis rutrum orci, id vehicula dolor bibendum at. Pellentesque semper odio in augue malesuada lobortis. Curabitur rutrum et lectus vel ullamcorper. In dolor erat, vehicula eu viverra nec, eleifend nec sapien. Donec eget pellentesque magna, ac ultricies nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam et neque ligula. Vestibulum fermentum purus eu nibh sodales euismod."
+
+if [ -f "README.md" ]; then
+  echo "Readme already exists! :scream: Exiting!" | emojify
+else
+
+
+  echo "Hello! This is a script to help generate a readme! :wave:" | emojify
+  echo -n "Enter the project title and press [ENTER]: "
+  read name
+  echo -n "Give a quick one-sentece description and press [ENTER]: "
+  read desc
+  echo -n "Would you like to fill the readme with Lorem Ipsum? [Y/N]: "
+  read -n 1 loremprompt
+
+  if [[ $loremprompt =~ ^[Yy]$ ]]; then
+    touch README.md
+    echo "# ${name}"              >> README.md
+    echo                          >> README.md
+    echo "${desc}"                >> README.md
+    echo                          >> README.md
+    echo "## Installation"        >> README.md
+    echo                          >> README.md
+    echo "${lorem}"               >> README.md
+    echo                          >> README.md
+    echo "## Usage"               >> README.md
+    echo                          >> README.md
+    echo "${lorem}"               >> README.md
+    echo                          >> README.md
+    echo "## Contributing"        >> README.md
+    echo                          >> README.md
+    echo "${lorem}"               >> README.md
+    echo                          >> README.md
+    echo "## License"             >> README.md
+    echo "[MIT](https://choosealicense.com/licenses/mit/)"   >> README.md
+    echo ":boom: Done! README.md placed in $(pwd)/README.md!" | emojify
+  else
+    touch README.md
+    echo "# ${name}"              >> README.md
+    echo                          >> README.md
+    echo "${desc}"                >> README.md
+    echo                          >> README.md
+    echo "## Installation"        >> README.md
+    echo                          >> README.md
+    echo "## Usage"               >> README.md
+    echo                          >> README.md
+    echo "## Contributing"        >> README.md
+    echo                          >> README.md
+    echo "## License" 
+    echo "[MIT](https://choosealicense.com/licenses/mit/)"   >> README.md
+    echo ":boom: Done! README.md placed in $(pwd)/README.md!" | emojify
+  fi
+fi
