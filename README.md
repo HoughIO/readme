@@ -4,7 +4,11 @@ Generates a boilerplate readme project
 
 ## Installation
 
-Be sure to add `readme.sh` to your `$PATH`!
+You'll need `emojify` too.
+[mrowa44's emojify](https://github.com/mrowa44/emojify)
+
+
+Be sure to add `readme` to your `$PATH`!
 `export PATH=$PATH:~/some/directory/to/this/script`
 
 or 
